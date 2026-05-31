@@ -1217,10 +1217,6 @@ const cvLink = document.getElementById('cv-download');
 cvLink.href = 'data:application/pdf;base64,' + RESUME_B64;
 
 // ===== TOOLS DATA =====
-const tools = [
-<div id="logoGrid"></div>
-
-<script>
 const logoData = [
   {
     name: "GoHighLevel",
@@ -1295,16 +1291,6 @@ const logoData = [
     logo: "https://cdn.simpleicons.org/anthropic"
   }
 ];
-
-const logoGrid = document.getElementById("logoGrid");
-
-logoGrid.innerHTML = logoData.map(tool => `
-  <div class="logo-card">
-    <img src="${tool.logo}" alt="${tool.name} logo">
-    <p>${tool.name}</p>
-  </div>
-`).join("");
-</script>
 
 const toolsGrid = document.getElementById('tools-grid');
 tools.forEach(t => {
